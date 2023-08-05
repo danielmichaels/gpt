@@ -70,7 +70,7 @@ func (g *GPT) mods(args []string) error {
 	if err := setApiKey("OPENAI_API_KEY"); err != nil {
 		return err
 	}
-	tool := []string{"mods", "--status-text", "Yeet", "-f"}
+	tool := []string{"mods", "--status-text", "Yeet", "-f", "-p"}
 	if g.Interactive {
 		g.PromptPath = filepath.Join("/tmp", fs.Isosec())
 		err := Z.Exec("vim", g.PromptPath)
