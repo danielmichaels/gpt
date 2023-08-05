@@ -1,10 +1,11 @@
 # gpt
 
 > My terminal GPT client
-
 This CLI leverages other LLM based applications and packages them
 into a workable application for me.
-![gpt demo.gif](_docs%2Fgpt%20demo.gif)
+ 
+![demo.gif](_docs%2Fdemo.gif)
+
 ## Install
 
 Standalone
