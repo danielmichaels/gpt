@@ -23,7 +23,7 @@ var Cmd = &Z.Cmd{
 	Name:    `gpt`,
 	Summary: `My GPT client CLI wrapper`,
 	Usage:   `gpt <text>`,
-	Version: `v0.0.1`,
+	Version: `v0.1.0`,
 	License: `Apache Software License 2.0`,
 	Source:  `github.com/danielmichaels/gpt`,
 	Description: `

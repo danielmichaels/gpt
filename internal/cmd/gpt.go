@@ -23,6 +23,13 @@ func NewGPT() *GPT {
 	return &GPT{Interactive: false}
 }
 
+func editor() string {
+	if os.Getenv("EDITOR") != "" {
+		return os.Getenv("EDITOR")
+	}
+	return "vim"
+}
+
 func gptEntry(_ *Z.Cmd, args ...string) error {
 	g := NewGPT()
 	if len(args) == 0 {
@@ -73,7 +80,7 @@ func (g *GPT) mods(args []string) error {
 	tool := []string{"mods", "--status-text", "Yeet", "-f", "-p"}
 	if g.Interactive {
 		g.PromptPath = filepath.Join("/tmp", fs.Isosec())
-		err := Z.Exec("vim", g.PromptPath)
+		err := Z.Exec(editor(), g.PromptPath)
 		if err != nil {
 			return err
 		}
